@@ -1,0 +1,222 @@
+<% include ./layouts/header.ejs%>
+
+
+<body>
+<!-- banner -->
+<div class="w3ls-banner">
+    <div class="w3lsbanner-info">
+        <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="header-mdl agileits-logo"><!-- header-two -->
+                    <h1><a href="/">Persipura Jayapura</a></h1>
+                </div>
+                <div class="header-nav"><!-- header-three -->
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- top-nav -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav cl-effect-16">
+                                <li><a href="/" data-hover="Home">Home</a></li>
+                                <li><a href="/Team" class="active" data-hover="Team">Team</a></li>
+                                <li><a href="/Berita" data-hover="Berita">Berita</a></li> 
+                                
+                                <li><a href="gallery" data-hover="Gallery">Gallery</a></li>
+                                <li><a href="/contact" data-hover="About">About</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+
+    </div>
+</div>
+<!--
+<!-- //banner -->
+<!-- about -->
+                                                <!-- Penjaga gawang -->
+
+<section class="team" >
+    <div class="container">
+        <div class="wthree_head_section">
+            <h3 class="w3l_header">Skuad Persipura Jayapura 2018/2019</h3>  
+        </div>
+        <div class="team-grid-top">
+            <h2>Staff Klub</h2>
+            <p>&nbsp</p>
+          
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="images/bttm.jpg" alt="" />
+                    <h3>Benhur T mano</h3>
+                    <h4>Chairman</h4>
+                    <p>indonesia</p>
+                </div>
+            </div>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="images/rudi.jpg" alt="" />
+                    <h3>Rudi Maswi</h3>
+                    <h4>Manager</h4>
+                    <p> indonesia</p>
+                </div>
+            </div>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="images/luv.jpg" alt="" />
+                    <h3>luciano leandro</h3>
+                    <h4>Coach</h4>
+                    <p>Brazil</p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+</section>
+
+<section class="team" >
+    <div class="container">
+        <div class="wthree_head_section">
+       
+        </div>
+        <div class="team-grid-top">
+            <h2>Goalkeeper</h2>
+            <p>&nbsp</p>
+            <% gk.forEach(function (gk) { %>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="uploads/pemain/<%=gk.image%>" alt="" />
+                    <h3><%=gk.nama%></h3>
+                    <h4><%=gk.posisi%></h4>
+                    <p><%=gk.tanggal_Lahir%></br>
+                    <%=gk.kebangsaan%></p>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+</section>
+
+                                                    <!-- defender-->
+<section class="team" >
+    <div class="container">
+        
+        <div class="team-grid-top">
+            <h2>Defender</h2>
+            <p>&nbsp</p>
+            <% df.forEach(function (df) { %>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="uploads/pemain/<%=df.image%>" alt="" />
+                    <h3><%=df.nama%></h3>
+                    <h4><%=df.posisi%></h4>
+                    <p><%=df.tanggal_Lahir%></br>
+                    <%=df.kebangsaan%></p>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        
+    </div>
+</section>
+                                            <!-- midfielder-->
+ <section class="team" >
+    <div class="container">
+        
+        <div class="team-grid-top">
+            <h2>Midfielder</h2>
+            <p>&nbsp</p>
+            <% mf.forEach(function (mf) { %>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="uploads/pemain/<%=mf.image%>" alt="" />
+                    <h3><%=mf.nama%></h3>
+                    <h4><%=mf.posisi%></h4>
+                    <p><%=mf.tanggal_Lahir%></br>
+                    <%=mf.kebangsaan%></p>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        
+    </div>
+</section>
+                                                <!-- attacker -->
+<section class="team" >
+    <div class="container">
+        <div class="team-grid-top">
+            <h2>Forwarded</h2>
+            <p>&nbsp</p>
+            <% fw.forEach(function (fw) { %>
+            <div class="col-md-3 team1">
+                <div class="inner-team1">
+                    <img src="uploads/pemain/<%=fw.image%>" alt="" />
+                    <h3><%=fw.nama%></h3>
+                    <h4><%=fw.posisi%></h4>
+                    <p><%=fw.tanggal_Lahir%></br>
+                    <%=fw.kebangsaan%></p>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        
+    </div>
+</section>
+<!-- //Team section -->
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+       <h1>Sponsor <span>Persipura</span> </h1>
+        <div class="f-bg-w3l">
+        
+            <img src="images/Gojek.jpg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/freeport.jpg" style=" width: 150px; height: 90px; margin: 20px "> <img src="images/Logo-Bosowa.jpg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/bank papua.jpeg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/specs.jpg" style="width: 150px; height: 90px ; margin: 20px ">
+            <div style="text-align: center;">
+                
+                 <ul class="social_agileinfo">
+                    <h3>follow persipura</h3>
+                    <li><a href="https://www.facebook.com/groups/1606607056019473/about/" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/persipura1963_" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/persipurapapua1963/?hl=id" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>  
+
+                <div class="clearfix"> </div>
+            </div>
+            </div>
+            
+               
+    <p class="copyright">© 2018 Football Club. All Rights Reserved | Persipura Jayapura</p>
+</div>
+<!-- //footer -->
+</body>
+</html>
+
+
+<% include ./layouts/footer.ejs%>

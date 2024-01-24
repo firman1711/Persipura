@@ -1,0 +1,147 @@
+<% include ./layouts/header.ejs%>
+<body> 
+	<!-- banner -->
+	<div class="w3ls-banner">
+		<div class="w3lsbanner-info">
+			<!-- header -->
+			<div class="header">
+				<div class="container">  
+					<div class="header-mdl agileits-logo"><!-- header-two --> 
+						<h1><a href="/">Persipura Jayapura</a></h1> 
+					</div>
+					<div class="header-nav"><!-- header-three --> 	
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button> 
+							</div>
+							<!-- top-nav -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav cl-effect-16">
+									<li><a href="/" data-hover="Home">Home</a></li>
+									<li><a href="/Team" data-hover="Team">Team</a></li> 
+									<li><a href="/Berita" class="active" data-hover="Berita">Berita</a></li>
+
+									<li><a href="/gallery" data-hover="Gallery">Gallery</a></li>
+									<li><a href="/contact" data-hover="About">About</a></li>
+								</ul>  
+								<div class="clearfix"> </div>	
+							</div>
+						</nav>    
+					</div>	
+				</div>	
+			</div>	
+			<!-- //header --> 
+			
+		</div>	
+	</div>	
+	<!-- //banner -->
+		<!--gallery-->
+	<div class="gallery">
+		<div class="container">	
+		<div class="wthree_head_section">
+			  <div class="grid_3 grid_5 agileits">	
+
+			  	<div class="content">
+		<div class="content-grids clrx">
+		 	<% berita.forEach(function (a) { %>
+		 	<div class="col-md-3">	
+		 	</br>
+				<img src="/uploads/artikel/<%=a.Gambar%>" alt="" class="gallery-box"/>
+				 <h3></br><b><%= a.Judul %></b></h3>
+				 <a style="word-break: break-all;text-align: justify;" ><%= a.artikel.substring(0,120) %></a>
+				 <div class="more" style ><a href="/berita/<%= a.id_Posting %>">> Read More</a></div>
+				 <p></br></p>
+			</div>	
+			<% }); %>
+			<div class="clearfix"></div>
+				</div>
+				</div>
+					<p> &nbsp </p>
+
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+
+
+			<div class="clearfix"> </div>	
+			</div>
+			<script src="js/lightbox-plus-jquery.min.js"></script>
+		</div>
+</div>
+</div>
+<!--//gallery-->
+    	
+		<!-- footer -->
+	<div class="footer">
+    <div class="container">
+       <h1>Sponsor <span>Persipura</span></h1>
+        <div class="f-bg-w3l">
+        
+            <img src="images/Gojek.jpg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/freeport.jpg" style=" width: 150px; height: 90px; margin: 20px "> <img src="images/Logo-Bosowa.jpg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/bank papua.jpeg" style="width: 150px; height: 90px ; margin: 20px "> <img src="images/specs.jpg" style="width: 150px; height: 90px ; margin: 20px ">
+            <div style="text-align: center;">
+                
+                 <ul class="social_agileinfo">
+                    <h3>follow persipura</h3>
+                    <li><a href="https://www.facebook.com/groups/1606607056019473/about/" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/persipura1963_" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/persipurapapua1963/?hl=id" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
+                    
+                </ul>
+            </div>  
+
+                <div class="clearfix"> </div>
+            </div>
+            </div>
+            
+			
+			<p class="copyright">© 2018 Football Club. All Rights Reserved | Persipura Jayapura </p>
+	</div>
+	<!-- //footer -->
+  
+	<!-- js --> 
+	<script src="js/jquery-2.2.3.min.js"></script> 
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //js -->  
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->  
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+
+<% include ./layouts/footer.ejs%>
